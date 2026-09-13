@@ -1,0 +1,24 @@
+{
+  "name": "sent-multichannel-notifications",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Multi-channel notification demo built on the Sent.dm unified messaging API (SMS / WhatsApp / RCS).",
+  "type": "module",
+  "engines": {
+    "node": ">=22.6.0"
+  },
+  "scripts": {
+    "send": "node --env-file=.env src/send.ts",
+    "webhook": "node --env-file=.env src/webhook.ts",
+    "event-types": "node --env-file=.env src/event-types.ts",
+    "register-webhook": "node --env-file=.env src/register-webhook.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@sentdm/sentdm": "^0.37.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "typescript": "^5.9.0"
+  }
+}
